@@ -41,7 +41,7 @@ export default function Users() {
     useEffect(() => {
         getAllGroups().then((res) => {
             if (!res) toast.error('خطا در دریافت گروه ها')
-            else setGroups(res.data)
+            else setGroups([res.data])
         })
 
         get_all_users().then((res) => {
@@ -163,7 +163,7 @@ export default function Users() {
                                                 setFormData({...formData})
                                             }}
                                         >
-                                            {groups.map((item: any, index:number) => {
+                                            {groups.flat().map((item: any, index:number) => {
                                                 return (
                                                     <SelectItem key={index} value={item.id}>
                                                         {item['name']}

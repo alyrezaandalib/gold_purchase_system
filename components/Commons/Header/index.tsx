@@ -38,13 +38,15 @@ export default function Header() {
         PhoneNumber: "",
     })
 
-    const [role, setRole] = useState()
+    const [role, setRole] = useState("admin")
 
     useEffect(() => {
         if (pathName !== '/login') {
             const get_role = async () => {
                 const res = await checkRole()
-                setRole(res['role'])
+                if (res) {
+                    setRole(res['role'])
+                }
             }
             get_role()
         }

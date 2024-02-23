@@ -13,7 +13,7 @@ import {IconTimeline} from "@tabler/icons-react";
 export default function FooterMenuMobile() {
     const [active, setActive] = useState(0);
     const pathName = usePathname();
-    const [role, setRole] = useState<string>()
+    const [role, setRole] = useState<string>("admin")
     const [menu, setMenu] = useState([{id: 2, name: '', icon: <></>, dis: '', href: ''}])
 
 
@@ -26,7 +26,9 @@ export default function FooterMenuMobile() {
 
         if (pathName != '/login') {
             get_role().then((res) => {
-                setRole(res['role'])
+                if (res){
+                    setRole(res['role'])
+                }
             })
 
 
