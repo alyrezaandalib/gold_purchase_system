@@ -1,7 +1,5 @@
 import type {Metadata} from 'next'
-import './globals.css'
-import Header from "@/components/Commons/Header";
-import FooterMenuMobile from "../components/Commons/FooterMenuMobile";
+import '../globals.css'
 import {headers} from "next/headers";
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -36,12 +34,8 @@ export default function RootLayout({
         />
         <body className={`w-full h-[100vh] flex items-start bg-primary `}>
         {/*// ** mobileTabs*/}
-        {(pathname != "/login" && pathname != `/signup/}`) ? <Header/> : ""}
         <div className={"w-full mt-[3.875rem]"} style={{height: "calc(100vh - 8.2rem)"}}>{children}</div>
         {/*// ** mobileTabs*/}
-        <div className={"flex justify-center items-center w-full fixed bottom-0"} dir={"ltr"}>
-            {(pathname != "/login" && pathname != `/signup`) ? <FooterMenuMobile/> : ''}
-        </div>
         </body>
         </html>
     )
