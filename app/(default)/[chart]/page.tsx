@@ -1,5 +1,5 @@
 'use client'
-import NotFound from "@/app/(default)/not-found";
+import NotFound from "@/app/not-found";
 import GoldChart from "@/components/Charts/goldChart";
 import {useState} from "react";
 import GlobalCurrency from "@/components/Charts/GlobalCurrency";

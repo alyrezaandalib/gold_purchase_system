@@ -36,11 +36,11 @@ export default function RootLayout({
             theme="light"
         />
         {/*// ** mobileTabs*/}
-        {(pathname != "/login" && pathname != `/signup/}`) ? <Header/> : ""}
+        {(pathname != "/login") ? <Header/> : ""}
         <div className={"w-full mt-[3.875rem]"} style={{height: "calc(100vh - 8.2rem)"}}>{children}</div>
         {/*// ** mobileTabs*/}
         <div className={"flex justify-center items-center w-full fixed bottom-0"} dir={"ltr"}>
-            {(pathname != "/login" && pathname != `/signup`) ? <FooterMenuMobile/> : ''}
+            {(pathname != "/login") ? <FooterMenuMobile/> : ''}
         </div>
         </body>
         </html>

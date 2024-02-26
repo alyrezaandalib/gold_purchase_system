@@ -18,6 +18,7 @@ export default function RootLayout({
     const pathname = headers().get('x-pathname')
     return (
         <html lang="fa" dir={"rtl"}>
+        <body className={`w-full h-[100vh] flex items-start bg-primary `}>
         <ToastContainer
             className={"text-sm"}
             position="bottom-left"
@@ -32,10 +33,7 @@ export default function RootLayout({
             pauseOnHover={false}
             theme="light"
         />
-        <body className={`w-full h-[100vh] flex items-start bg-primary `}>
-        {/*// ** mobileTabs*/}
         <div className={"w-full mt-[3.875rem]"} style={{height: "calc(100vh - 8.2rem)"}}>{children}</div>
-        {/*// ** mobileTabs*/}
         </body>
         </html>
     )
